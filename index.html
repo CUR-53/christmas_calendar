@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="scripts/music.js" defer></script>
     <script src="scripts/dateChecker.js" defer></script>
+    <script src="scripts/modale.js" defer></script>
     <title>Julekalender</title>
   </head>
   <body>
@@ -16,11 +18,40 @@
           webudviklerglæde! Lad os sprede ekstra julehygge med små webudviklertips. Skru op for julemusikken, tænd lysene, og lad os skabe en magisk digital
           jul! 🎄✨
         </p>
-        <button class="hero_container_btn">Tænd Klokkerne!</button>
-        <nav class="nav">
-          <a class="nav-items" href="#">Find os</a>
-          <a class="nav-items" href="#">Om os</a>
-        </nav>
+
+        <div type="button" id="playButton" value="PLAY" onclick="togglePlay()" class="hero_container_btn">Tænd Klokkerne!</div>
+        <audio id="audio" src="https://www.chosic.com/wp-content/uploads/2021/12/Jingle-Bells(chosic.com).mp3"></audio>
+
+        <div class="nav">
+          <button id="nav_modal_find_btn" class="open_modal nav_items">Find os</button>
+
+          <div id="nav_modal_find" class="nav_modal">
+            <div class="nav_modal_content">
+              <span class="nav_modal_content_close" onclick="closeFindModal()">&times;</span>
+              <h2 class="content_title">Find os</h2>
+              <p class="content_paragrah">
+                Følg med og vær en del af vores digitale fællesskab! Find os på dine foretrukne sociale medieplatforme for at få de seneste opdateringer,
+                spændende webudviklertips og deltage i sjove diskussioner. Vi er tilgængelige på Instagram, Twitter og Facebook. Hop med ombord, og lad os skabe
+                forbindelse på tværs af nettet! 🌐📱✨
+              </p>
+            </div>
+          </div>
+
+          <button id="nav_modal_about_btn" type="button" class="open_modal nav_items">Om os</button>
+
+          <div id="nav_modal_about" class="nav_modal">
+            <div class="nav_modal_content">
+              <span class="nav_modal_content_close" onclick="closeAboutModal()">&times;</span>
+              <h2 class="content_title">Om os</h2>
+              <p class="content_paragrah">
+                Velkommen til vores digitale hjem! Vi er en gruppe webentusiaster, der elsker at udforske den digitale verden. Gennem vores erfaringer og
+                indsigt ønsker vi at dele glæden ved webudvikling med dig. Bag skærmene arbejder vi på at skabe smukke og funktionelle digitale oplevelser. Dyk
+                ned i vores univers, åbn lågerne i julekalenderen, og lad os sammen udforske de endeløse muligheder inden for webudvikling. Velkommen til vores
+                digitale familie! 🌐✨
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

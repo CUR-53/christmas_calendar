@@ -31,11 +31,85 @@ body {
   gap: 2rem;
   padding: 0px 30px;
 }
-.nav-items {
+.nav_items {
   color: #f9f2de;
   font-family: "poppins";
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+.nav .open_modal {
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #f9f2de;
+}
+.nav .nav_modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 500; /* Sit on top */
+  padding-top: 300px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  .nav .nav_modal {
+    padding-top: 50px;
+  }
+}
+.nav .nav_modal_content {
+  position: relative;
+  background-color: #fefefe;
+  color: #161616;
+  margin: auto;
+  padding: 40px 40px 30px;
+  height: max-content;
+  border: 1px solid #888;
+  text-align: left;
+  border-radius: 10px;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .nav .nav_modal_content {
+    width: 80%;
+  }
+}
+.nav .nav_modal_content .content_title {
+  font-family: "poppins";
+  font-size: 3rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+.nav .nav_modal_content .content_paragrah {
+  font-family: "poppins";
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.nav .nav_modal_content_close {
+  position: absolute;
+  color: #aaaaaa;
+  right: 20px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.nav .nav_modal_content_close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav .nav_modal_content_close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .hero {
