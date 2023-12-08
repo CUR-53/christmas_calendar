@@ -1,40 +1,9 @@
 //_BASE.SCSS
-
-/* ===== BASE SITE CSS START ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* 0.625rem = 10px */
-html {
-  font-family: font(primary);
-  font-size: 0.625rem;
-}
-
-/* 1.6rem = 16px */
-body {
-  background-color: white;
-  font-size: fontSize(md);
-}
-/* ===== BASE SITE CSS END ===== */
+$content-width: 1366px;
 
 $fonts: (
-  primary: (
-    'poppins',
-    sans-serif,
-  ),
-  secondary: (
-    'Josefine Sans',
-    sans-serif,
-  ),
-  tertiary: (
-    'Nunito',
-    sans-serif,
-  ),
+  primary: 'poppins',
+  secondary: 'Courgette',
 );
 
 @function font($font-name) {
@@ -42,10 +11,10 @@ $fonts: (
 }
 
 $colors: (
-  primary: #0c380a,
-  secondary: #072909,
+  primary: #11590f,
+  secondary: #0b410e,
   tertiary: #011237,
-  quaternary: #ba0c0c,
+  quaternary: #ab1212,
   quinquernary: #5c0000,
 
   light: #f9f2de,
@@ -63,6 +32,7 @@ $font-sizes: (
   'xl': 3rem,
   'xxl': 4rem,
   'xxxl': 5rem,
+  'xxxxl': 7rem,
 );
 @function fontSize($size-name) {
   @return map-get($font-sizes, $size-name);
@@ -114,3 +84,23 @@ $font-sizes: (
     }
   }
 }
+
+/* ===== BASE SITE CSS START ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 0.625rem = 10px */
+html {
+  font-family: font(primary), sans-serif;
+  font-size: 0.625rem;
+}
+
+/* 1.6rem = 16px */
+body {
+  background-color: white;
+  font-size: fontSize(md);
+}
+/* ===== BASE SITE CSS END ===== */
