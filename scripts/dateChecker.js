@@ -2,7 +2,6 @@ const currentDate = new Date().toLocaleDateString('en-DK', { timeZone: 'CET' });
 
 const dateChecker = document.querySelectorAll('.checker');
 const hideText = document.querySelectorAll('.calender_card-text');
-var time = document.querySelectorAll('.time');
 
 dateChecker.forEach((element, index) => {
   const elementDate = element.textContent.trim();
