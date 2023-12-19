@@ -1,17 +1,15 @@
-const currentDate = new Date().toLocaleDateString('en-DK', { timeZone: 'CET' });
+const currentDate = new Date();
 
-const dateChecker = document.querySelectorAll('.checker');
-const hideText = document.querySelectorAll('.calender_card-text');
-var time = document.querySelectorAll('.time');
+document.querySelectorAll('.checker').forEach((element, index) => {
+  const [day, month, year] = element.textContent.trim().split('/');
+  const elementDateObject = new Date(`20${year}-${month}-${day}`);
 
-dateChecker.forEach((element, index) => {
-  const elementDate = element.textContent.trim();
-  const elementDateObject = new Date(`${elementDate} GMT+1000`);
-  const currentDateObject = new Date(`${currentDate} GMT+1000`);
+  const closestItems = element.closest('.items');
+  const hideTextElement = document.querySelectorAll('.calender_card-text')[index];
 
-  if (elementDateObject <= currentDateObject) {
-    element.closest('.items').classList.add('active');
+  if (elementDateObject <= currentDate) {
+    closestItems.classList.add('active');
   } else {
-    hideText[index].classList.add('show');
+    hideTextElement.classList.add('show');
   }
 });
